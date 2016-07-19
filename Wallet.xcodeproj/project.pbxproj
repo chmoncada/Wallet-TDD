@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A10BE3E31D3DC41F000AC433 /* AGTSimpleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A10BE3E11D3DC41F000AC433 /* AGTSimpleViewController.m */; };
+		A10BE3E41D3DC41F000AC433 /* AGTSimpleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A10BE3E11D3DC41F000AC433 /* AGTSimpleViewController.m */; };
+		A10BE3E51D3DC41F000AC433 /* AGTSimpleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A10BE3E21D3DC41F000AC433 /* AGTSimpleViewController.xib */; };
+		A10BE3E61D3DC41F000AC433 /* AGTSimpleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A10BE3E21D3DC41F000AC433 /* AGTSimpleViewController.xib */; };
+		A10BE3E81D3DC463000AC433 /* AGTControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A10BE3E71D3DC463000AC433 /* AGTControllerTests.m */; };
 		A11A322C1D3475820016981C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A11A322B1D3475820016981C /* main.m */; };
 		A11A322F1D3475820016981C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A11A322E1D3475820016981C /* AppDelegate.m */; };
-		A11A32321D3475820016981C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A11A32311D3475820016981C /* ViewController.m */; };
-		A11A32351D3475820016981C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A11A32331D3475820016981C /* Main.storyboard */; };
 		A11A32371D3475820016981C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A11A32361D3475820016981C /* Assets.xcassets */; };
 		A11A323A1D3475820016981C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A11A32381D3475820016981C /* LaunchScreen.storyboard */; };
-		A11A32501D3475820016981C /* WalletUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A11A324F1D3475820016981C /* WalletUITests.m */; };
 		A1A760341D3C55A600124861 /* AGTBrokerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A760331D3C55A600124861 /* AGTBrokerTests.m */; };
 		A1A760371D3C56CE00124861 /* AGTBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A760361D3C56CE00124861 /* AGTBroker.m */; };
 		A1A760381D3C56CE00124861 /* AGTBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A760361D3C56CE00124861 /* AGTBroker.m */; };
@@ -34,31 +36,22 @@
 			remoteGlobalIDString = A11A32261D3475820016981C;
 			remoteInfo = Wallet;
 		};
-		A11A324C1D3475820016981C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A11A321F1D3475820016981C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A11A32261D3475820016981C;
-			remoteInfo = Wallet;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A10BE3E01D3DC41F000AC433 /* AGTSimpleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTSimpleViewController.h; sourceTree = "<group>"; };
+		A10BE3E11D3DC41F000AC433 /* AGTSimpleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTSimpleViewController.m; sourceTree = "<group>"; };
+		A10BE3E21D3DC41F000AC433 /* AGTSimpleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AGTSimpleViewController.xib; sourceTree = "<group>"; };
+		A10BE3E71D3DC463000AC433 /* AGTControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTControllerTests.m; sourceTree = "<group>"; };
 		A11A32271D3475820016981C /* Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A11A322B1D3475820016981C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A11A322D1D3475820016981C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A11A322E1D3475820016981C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A11A32301D3475820016981C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A11A32311D3475820016981C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A11A32341D3475820016981C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A11A32361D3475820016981C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A11A32391D3475820016981C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A11A323B1D3475820016981C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A11A32401D3475820016981C /* WalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A11A32461D3475820016981C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A11A324B1D3475820016981C /* WalletUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalletUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A11A324F1D3475820016981C /* WalletUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WalletUITests.m; sourceTree = "<group>"; };
-		A11A32511D3475820016981C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1A760331D3C55A600124861 /* AGTBrokerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTBrokerTests.m; sourceTree = "<group>"; };
 		A1A760351D3C56CE00124861 /* AGTBroker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTBroker.h; sourceTree = "<group>"; };
 		A1A760361D3C56CE00124861 /* AGTBroker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTBroker.m; sourceTree = "<group>"; };
@@ -87,22 +80,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A11A32481D3475820016981C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A10BE3DE1D3DC3FF000AC433 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A10BE3E71D3DC463000AC433 /* AGTControllerTests.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		A10BE3DF1D3DC408000AC433 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A10BE3E01D3DC41F000AC433 /* AGTSimpleViewController.h */,
+				A10BE3E11D3DC41F000AC433 /* AGTSimpleViewController.m */,
+				A10BE3E21D3DC41F000AC433 /* AGTSimpleViewController.xib */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		A11A321E1D3475820016981C = {
 			isa = PBXGroup;
 			children = (
 				A11A32291D3475820016981C /* Wallet */,
 				A11A32431D3475820016981C /* WalletTests */,
-				A11A324E1D3475820016981C /* WalletUITests */,
 				A11A32281D3475820016981C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,7 +115,6 @@
 			children = (
 				A11A32271D3475820016981C /* Wallet.app */,
 				A11A32401D3475820016981C /* WalletTests.xctest */,
-				A11A324B1D3475820016981C /* WalletUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -120,13 +122,11 @@
 		A11A32291D3475820016981C /* Wallet */ = {
 			isa = PBXGroup;
 			children = (
+				A10BE3DF1D3DC408000AC433 /* Controllers */,
 				A1F960E81D373D1B00B3FF65 /* Categories */,
 				A11A32601D3477F20016981C /* Models */,
 				A11A322D1D3475820016981C /* AppDelegate.h */,
 				A11A322E1D3475820016981C /* AppDelegate.m */,
-				A11A32301D3475820016981C /* ViewController.h */,
-				A11A32311D3475820016981C /* ViewController.m */,
-				A11A32331D3475820016981C /* Main.storyboard */,
 				A11A32361D3475820016981C /* Assets.xcassets */,
 				A11A32381D3475820016981C /* LaunchScreen.storyboard */,
 				A11A323B1D3475820016981C /* Info.plist */,
@@ -146,19 +146,11 @@
 		A11A32431D3475820016981C /* WalletTests */ = {
 			isa = PBXGroup;
 			children = (
+				A10BE3DE1D3DC3FF000AC433 /* Controllers */,
 				A11A325D1D34768C0016981C /* Models */,
 				A11A32461D3475820016981C /* Info.plist */,
 			);
 			path = WalletTests;
-			sourceTree = "<group>";
-		};
-		A11A324E1D3475820016981C /* WalletUITests */ = {
-			isa = PBXGroup;
-			children = (
-				A11A324F1D3475820016981C /* WalletUITests.m */,
-				A11A32511D3475820016981C /* Info.plist */,
-			);
-			path = WalletUITests;
 			sourceTree = "<group>";
 		};
 		A11A325D1D34768C0016981C /* Models */ = {
@@ -231,24 +223,6 @@
 			productReference = A11A32401D3475820016981C /* WalletTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A11A324A1D3475820016981C /* WalletUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A11A325A1D3475820016981C /* Build configuration list for PBXNativeTarget "WalletUITests" */;
-			buildPhases = (
-				A11A32471D3475820016981C /* Sources */,
-				A11A32481D3475820016981C /* Frameworks */,
-				A11A32491D3475820016981C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A11A324D1D3475820016981C /* PBXTargetDependency */,
-			);
-			name = WalletUITests;
-			productName = WalletUITests;
-			productReference = A11A324B1D3475820016981C /* WalletUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -262,10 +236,6 @@
 						CreatedOnToolsVersion = 7.3.1;
 					};
 					A11A323F1D3475820016981C = {
-						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = A11A32261D3475820016981C;
-					};
-					A11A324A1D3475820016981C = {
 						CreatedOnToolsVersion = 7.3.1;
 						TestTargetID = A11A32261D3475820016981C;
 					};
@@ -286,7 +256,6 @@
 			targets = (
 				A11A32261D3475820016981C /* Wallet */,
 				A11A323F1D3475820016981C /* WalletTests */,
-				A11A324A1D3475820016981C /* WalletUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -296,9 +265,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A10BE3E51D3DC41F000AC433 /* AGTSimpleViewController.xib in Resources */,
 				A11A323A1D3475820016981C /* LaunchScreen.storyboard in Resources */,
 				A11A32371D3475820016981C /* Assets.xcassets in Resources */,
-				A11A32351D3475820016981C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,13 +275,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A11A32491D3475820016981C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				A10BE3E61D3DC41F000AC433 /* AGTSimpleViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,12 +287,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1A7603D1D3C80DA00124861 /* AGTWallet.m in Sources */,
-				A11A32321D3475820016981C /* ViewController.m in Sources */,
 				A1F960EB1D373D6700B3FF65 /* NSObject+GNUStepAddons.m in Sources */,
 				A11A322F1D3475820016981C /* AppDelegate.m in Sources */,
 				A1F960E71D373AB900B3FF65 /* AGTMoney.m in Sources */,
 				A11A322C1D3475820016981C /* main.m in Sources */,
 				A1A760371D3C56CE00124861 /* AGTBroker.m in Sources */,
+				A10BE3E31D3DC41F000AC433 /* AGTSimpleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,18 +302,12 @@
 			files = (
 				A1F960EE1D3740C300B3FF65 /* AGTMoney.m in Sources */,
 				A1A7603A1D3C7DCB00124861 /* AGTWalletTests.m in Sources */,
+				A10BE3E81D3DC463000AC433 /* AGTControllerTests.m in Sources */,
 				A1F960ED1D37403400B3FF65 /* AGTMoneyTests.m in Sources */,
 				A1A7603E1D3C80DA00124861 /* AGTWallet.m in Sources */,
 				A1A760341D3C55A600124861 /* AGTBrokerTests.m in Sources */,
 				A1A760381D3C56CE00124861 /* AGTBroker.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A11A32471D3475820016981C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A11A32501D3475820016981C /* WalletUITests.m in Sources */,
+				A10BE3E41D3DC41F000AC433 /* AGTSimpleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,22 +319,9 @@
 			target = A11A32261D3475820016981C /* Wallet */;
 			targetProxy = A11A32411D3475820016981C /* PBXContainerItemProxy */;
 		};
-		A11A324D1D3475820016981C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A11A32261D3475820016981C /* Wallet */;
-			targetProxy = A11A324C1D3475820016981C /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A11A32331D3475820016981C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A11A32341D3475820016981C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A11A32381D3475820016981C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -519,28 +463,6 @@
 			};
 			name = Release;
 		};
-		A11A325B1D3475820016981C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = WalletUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.charlesmoncada.WalletUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = Wallet;
-			};
-			name = Debug;
-		};
-		A11A325C1D3475820016981C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = WalletUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.charlesmoncada.WalletUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = Wallet;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -567,15 +489,6 @@
 			buildConfigurations = (
 				A11A32581D3475820016981C /* Debug */,
 				A11A32591D3475820016981C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A11A325A1D3475820016981C /* Build configuration list for PBXNativeTarget "WalletUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A11A325B1D3475820016981C /* Debug */,
-				A11A325C1D3475820016981C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
