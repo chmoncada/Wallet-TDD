@@ -18,9 +18,8 @@ Para la práctica, aparte de los métodos del curso se implementaron los método
 
 Y se implementaron los siguientes Tests:
 
-* xxx
-* yyy
-* zzz
+* testAddMoney
+* testTakeMoney
 
 
 ## Controladores
@@ -29,9 +28,8 @@ Se creo una tabla con las características solicitadas en el enunciado de la pr�
 
 Se crearon los tests del data source de la tabla:
 
-* xxxx
-* yyy
-* zzz
+* testThatTableHasOneSectionPerCurrency
+* testThatNumberofCellsIsNumberOfMoneyPlusOne
 
 
 
