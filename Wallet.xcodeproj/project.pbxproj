@@ -16,6 +16,9 @@
 		A11A322F1D3475820016981C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A11A322E1D3475820016981C /* AppDelegate.m */; };
 		A11A32371D3475820016981C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A11A32361D3475820016981C /* Assets.xcassets */; };
 		A11A323A1D3475820016981C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A11A32381D3475820016981C /* LaunchScreen.storyboard */; };
+		A13EA8431D3EDEF400915320 /* AGTWalletTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A13EA8421D3EDEF400915320 /* AGTWalletTableViewController.m */; };
+		A13EA8441D3EDEF400915320 /* AGTWalletTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A13EA8421D3EDEF400915320 /* AGTWalletTableViewController.m */; };
+		A13EA8461D3EDF2200915320 /* AGTWalletTableViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A13EA8451D3EDF2200915320 /* AGTWalletTableViewControllerTests.m */; };
 		A1A760341D3C55A600124861 /* AGTBrokerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A760331D3C55A600124861 /* AGTBrokerTests.m */; };
 		A1A760371D3C56CE00124861 /* AGTBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A760361D3C56CE00124861 /* AGTBroker.m */; };
 		A1A760381D3C56CE00124861 /* AGTBroker.m in Sources */ = {isa = PBXBuildFile; fileRef = A1A760361D3C56CE00124861 /* AGTBroker.m */; };
@@ -52,6 +55,9 @@
 		A11A323B1D3475820016981C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A11A32401D3475820016981C /* WalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A11A32461D3475820016981C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A13EA8411D3EDEF400915320 /* AGTWalletTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTWalletTableViewController.h; sourceTree = "<group>"; };
+		A13EA8421D3EDEF400915320 /* AGTWalletTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTWalletTableViewController.m; sourceTree = "<group>"; };
+		A13EA8451D3EDF2200915320 /* AGTWalletTableViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTWalletTableViewControllerTests.m; sourceTree = "<group>"; };
 		A1A760331D3C55A600124861 /* AGTBrokerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTBrokerTests.m; sourceTree = "<group>"; };
 		A1A760351D3C56CE00124861 /* AGTBroker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGTBroker.h; sourceTree = "<group>"; };
 		A1A760361D3C56CE00124861 /* AGTBroker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGTBroker.m; sourceTree = "<group>"; };
@@ -87,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				A10BE3E71D3DC463000AC433 /* AGTControllerTests.m */,
+				A13EA8451D3EDF2200915320 /* AGTWalletTableViewControllerTests.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -97,6 +104,8 @@
 				A10BE3E01D3DC41F000AC433 /* AGTSimpleViewController.h */,
 				A10BE3E11D3DC41F000AC433 /* AGTSimpleViewController.m */,
 				A10BE3E21D3DC41F000AC433 /* AGTSimpleViewController.xib */,
+				A13EA8411D3EDEF400915320 /* AGTWalletTableViewController.h */,
+				A13EA8421D3EDEF400915320 /* AGTWalletTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -291,6 +300,7 @@
 				A11A322F1D3475820016981C /* AppDelegate.m in Sources */,
 				A1F960E71D373AB900B3FF65 /* AGTMoney.m in Sources */,
 				A11A322C1D3475820016981C /* main.m in Sources */,
+				A13EA8431D3EDEF400915320 /* AGTWalletTableViewController.m in Sources */,
 				A1A760371D3C56CE00124861 /* AGTBroker.m in Sources */,
 				A10BE3E31D3DC41F000AC433 /* AGTSimpleViewController.m in Sources */,
 			);
@@ -305,8 +315,10 @@
 				A10BE3E81D3DC463000AC433 /* AGTControllerTests.m in Sources */,
 				A1F960ED1D37403400B3FF65 /* AGTMoneyTests.m in Sources */,
 				A1A7603E1D3C80DA00124861 /* AGTWallet.m in Sources */,
+				A13EA8461D3EDF2200915320 /* AGTWalletTableViewControllerTests.m in Sources */,
 				A1A760341D3C55A600124861 /* AGTBrokerTests.m in Sources */,
 				A1A760381D3C56CE00124861 /* AGTBroker.m in Sources */,
+				A13EA8441D3EDEF400915320 /* AGTWalletTableViewController.m in Sources */,
 				A10BE3E41D3DC41F000AC433 /* AGTSimpleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

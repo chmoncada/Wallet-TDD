@@ -42,6 +42,39 @@
     
 }
 
+-(void) testAddMoney {
+    
+    // Creo un wallet con monedas
+    AGTWallet *wallet = [[AGTWallet alloc] initWithAmount:10 currency:@"EUR"];
+    
+    // Añado un nuevo money
+    AGTMoney *newMoney = [AGTMoney euroWithAmount:10];
+    [wallet addMoney: newMoney];
+    
+    // Veo cuanto hay de esa moneda en mi wallet
+    AGTMoney *totalEuros = [wallet getTotalOfCurrency: @"EUR"];
+    
+    // testeo si el nuevo money se anadio al wallet
+    XCTAssertEqualObjects(totalEuros, [AGTMoney euroWithAmount:20], @"The new money should be in the wallet, €10 + €10 = €20");
+    
+}
+
+-(void) testTakeMoney {
+    
+    // Creo un wallet con monedas
+    AGTWallet *wallet = [[AGTWallet alloc] initWithAmount:50 currency:@"EUR"];
+    
+    // Tomo monedas
+    [wallet takeMoney: [AGTMoney euroWithAmount:20]];
+    
+    // Veo cuanto sobra de esa moneda en mi wallet
+    AGTMoney *totalEuros = [wallet getTotalOfCurrency:@"EUR"];
+    
+    // Testeo
+    XCTAssertEqualObjects(totalEuros, [AGTMoney euroWithAmount:30], @"The wallet should be diminished by the money taken, €50 - €20 = €30");
+    
+}
+
 
 
 @end
