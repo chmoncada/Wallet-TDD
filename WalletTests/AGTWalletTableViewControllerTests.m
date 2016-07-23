@@ -9,11 +9,13 @@
 #import <XCTest/XCTest.h>
 #import "AGTWalletTableViewController.h"
 #import "AGTWallet.h"
+#import "AGTBroker.h"
 
 @interface AGTWalletTableViewControllerTests : XCTestCase
 
 @property(nonatomic, strong) AGTWalletTableViewController *walletVC;
 @property(nonatomic, strong) AGTWallet *wallet;
+@property(nonatomic, strong) AGTBroker *broker;
 
 @end
 
@@ -27,9 +29,10 @@
     [self.wallet plus:[AGTMoney euroWithAmount:1]];
     // to have more than 1 money of USD to test number of cells
     [self.wallet plus:[AGTMoney dollarWithAmount:5]];
+    self.broker = [AGTBroker new];
     
     
-    self.walletVC = [[AGTWalletTableViewController alloc] initWithModel: self.wallet];
+    self.walletVC = [[AGTWalletTableViewController alloc] initWithModel: self.wallet broker:self.broker];
 }
 
 - (void)tearDown {
@@ -37,7 +40,7 @@
     [super tearDown];
 }
 
--(void) testThatTableHasOneSectionPerCurrency {
+-(void) testThatTableHasOneSectionPerCurrencyPlusOneForTotal {
     
     NSUInteger sections = [self.walletVC numberOfSectionsInTableView:nil]; //nos hacemos pasar como otra cosa
     

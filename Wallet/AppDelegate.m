@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "AGTWallet.h"
+#import "AGTBroker.h"
+#import "AGTWalletTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +20,31 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    AGTWallet *wallet = [[AGTWallet alloc] initWithAmount:20 currency:@"EUR"];
+    [wallet addMoney:[AGTMoney dollarWithAmount:10]];
+    [wallet addMoney:[AGTMoney dollarWithAmount:10]];
+    [wallet addMoney:[AGTMoney euroWithAmount:20]];
+
+    AGTBroker *broker = [AGTBroker new];
+    [broker addRate:2
+       fromCurrency:@"EUR"
+         toCurrency:@"USD"];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    AGTWalletTableViewController *vc = [[AGTWalletTableViewController alloc] initWithModel:wallet
+                                                                                    broker:broker];
+    [vc.navigationItem setTitle:@"AGTWallet"];
+        
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    UINavigationController *nVC = [[UINavigationController alloc] initWithRootViewController:vc];
+    
+    
+    [self.window setRootViewController:nVC];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

@@ -8,15 +8,22 @@
 
 #import "AGTWalletTableViewController.h"
 #import "AGTWallet.h"
+
+static NSString *cellID = @"cellIdentifier";
+
 @interface AGTWalletTableViewController ()
+
 @property(nonatomic, strong) AGTWallet *model;
+@property(nonatomic, strong) AGTBroker *broker;
+
 @end
 
 @implementation AGTWalletTableViewController
 
--(id) initWithModel:(AGTWallet *)model {
+-(id) initWithModel:(AGTWallet *)model  broker:(AGTBroker *)broker{
     if(self = [super initWithStyle:UITableViewStylePlain]) {
         _model = model;
+        _broker = broker;
     }
     return self;
 }
@@ -54,15 +61,50 @@
     return [self.model numberOfMoneysForSection:section] + 1;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    // Configure the cell...
+    // Creamos la celda
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                      reuseIdentifier:cellID];
+    }
+    
+    AGTMoney *moneyForCell;
+    NSString *textOfCell;
+    //Si la sección es la ultima, mostramos el total de todo el wallet
+    if (indexPath.section == [self.model numberOfCurrencies]) {
+        moneyForCell = [self.model reduceToCurrency:@"EUR" withBroker:self.broker];
+        textOfCell = [NSString stringWithFormat:@"Gran Total: %@ EUR", [moneyForCell amount]];
+    } else {
+        //Si la celda es la ultima de la seccion, mostramos el subtotal del currency
+        if (indexPath.row == [self.model numberOfMoneysForSection:indexPath.section]) {
+            moneyForCell = [self.model getTotalOfCurrency:[[self.model currencies] objectAtIndex: indexPath.section ]];
+            textOfCell = [NSString stringWithFormat:@"SubTotal: %@ %@", [moneyForCell amount], [moneyForCell currency]];
+        } else {
+            //Mostramos el valor de cada money
+            moneyForCell = [[self.model moneysForSection:indexPath.section] objectAtIndex:indexPath.row];
+            textOfCell = [NSString stringWithFormat:@"%@ %@", [moneyForCell amount], [moneyForCell currency]];
+        }
+        
+    }
+    
+     //Configure the cell...
+    
+    cell.textLabel.text = textOfCell;
     
     return cell;
 }
-*/
+
+-(NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    if (section < [self.model numberOfCurrencies]) {
+        NSString *sectionText = [NSString stringWithFormat:@"Divisa: %@", [[self.model currencies] objectAtIndex:section] ];
+        return sectionText;
+    }else{
+        return @"Total (EUR)";
+    }
+}
 
 /*
 // Override to support conditional editing of the table view.

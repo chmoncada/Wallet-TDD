@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 @class AGTWallet;
+@class AGTBroker;
 
 @interface AGTWalletTableViewController : UITableViewController
 
--(id) initWithModel: (AGTWallet *) model;
+-(id) initWithModel: (AGTWallet *) model broker: (AGTBroker *) broker;
 
 @end

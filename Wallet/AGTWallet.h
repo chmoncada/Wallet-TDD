@@ -19,5 +19,7 @@
 
 -(AGTMoney *) getTotalOfCurrency:(NSString *)currency;
 -(NSInteger) numberOfMoneysForSection:(NSInteger) section;
+-(NSMutableArray *) currencies;
+-(NSMutableArray *) moneysForSection:(NSInteger) section;
 
 @end
