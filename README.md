@@ -21,6 +21,12 @@ Y se implementaron los siguientes Tests:
 * testAddMoney
 * testTakeMoney
 
+Se modificaron los siguientes Test comparados con los del curso Online:
+
+* testSimpleAddition (AGTMonetTests) - Se añadio el escenario de evitar la suma simple de dos monedas de diferente currency
+
+
+
 
 ## Controladores
 
@@ -30,6 +36,15 @@ Se crearon los tests del data source de la tabla:
 
 * testThatTableHasOneSectionPerCurrency
 * testThatNumberofCellsIsNumberOfMoneyPlusOne
+
+## App
+
+Se creo una tabla de ejemplo para mostrar la funcionalidad de secciones por divisa y celdas de subtotales y Gran Total.
+
+Para esto se implementaron los metodos del Data Source:
+
+* tableView:cellForRowAtIndexPath
+* tableView:titleForHeaderInSection
 
 
 

@@ -42,10 +42,19 @@
 
 -(id<AGTMoney>) plus:(AGTMoney *) other {
     
-    NSInteger totalAmount = [self.amount integerValue] + [other.amount integerValue];
-    AGTMoney *total = [[AGTMoney alloc] initWithAmount:totalAmount currency:self.currency];
-    
-    return total;
+    // It should add only if the currency of both AGTMoney are the same
+    if( [self.currency isEqual:[other currency]]) {
+
+        NSInteger totalAmount = [self.amount integerValue] + [other.amount integerValue];
+        AGTMoney *total = [[AGTMoney alloc] initWithAmount:totalAmount currency:self.currency];
+        
+        return total;
+    } else {
+        // If there are different currencies throws an Exception
+        NSException *e = [NSException exceptionWithName:@"CannotMakePlusMethod"
+                                                 reason:@"*** Cannot use plus: with different currencies" userInfo:nil];
+        @throw e;
+    }
     
 }
 

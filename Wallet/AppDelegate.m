@@ -25,7 +25,7 @@
     [wallet addMoney:[AGTMoney dollarWithAmount:10]];
     [wallet addMoney:[AGTMoney dollarWithAmount:10]];
     [wallet addMoney:[AGTMoney euroWithAmount:20]];
-
+    
     AGTBroker *broker = [AGTBroker new];
     [broker addRate:2
        fromCurrency:@"EUR"

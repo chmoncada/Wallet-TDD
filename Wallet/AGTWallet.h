@@ -10,16 +10,16 @@
 #import "AGTMoney.h"
 
 @interface AGTWallet : NSObject<AGTMoney>
-//@property (nonatomic, readonly) NSUInteger count;
-@property (nonatomic, readonly) NSUInteger numberOfCurrencies;
 
+@property (nonatomic, readonly) NSUInteger numberOfCurrencies;
+@property (nonatomic, strong) NSMutableArray *currencies;
 
 -(void) addMoney:(AGTMoney *) money;
 -(void) takeMoney:(AGTMoney *) money;
 
 -(AGTMoney *) getTotalOfCurrency:(NSString *)currency;
 -(NSInteger) numberOfMoneysForSection:(NSInteger) section;
--(NSMutableArray *) currencies;
+
 -(NSMutableArray *) moneysForSection:(NSInteger) section;
 
 @end

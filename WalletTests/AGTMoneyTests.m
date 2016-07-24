@@ -79,10 +79,12 @@
 
 -(void) testSimpleAddition {
     
-    XCTAssertEqualObjects([[AGTMoney dollarWithAmount:5] plus:
-                              [AGTMoney dollarWithAmount:5]],
-                              [AGTMoney dollarWithAmount:10],
-                              @"$5 + $5 = $10");
+    // Test if we can simple add
+    XCTAssertEqualObjects([[AGTMoney dollarWithAmount:5] plus: [AGTMoney dollarWithAmount:5]],
+                              [AGTMoney dollarWithAmount:10], @"$5 + $5 = $10");
+    // Test if we cannot simple add two different currencies
+    XCTAssertThrows([[AGTMoney dollarWithAmount:5] plus:[AGTMoney euroWithAmount:5]], @"Should not allow to simple add 2 different currencies");
+    
 }
 
 -(void) testHashIsAmount{
