@@ -26,8 +26,6 @@ Se modificaron los siguientes Test comparados con los del curso Online:
 * testSimpleAddition (AGTMonetTests) - Se añadio el escenario de evitar la suma simple de dos monedas de diferente currency
 
 
-
-
 ## Controladores
 
 Se creo una tabla con las características solicitadas en el enunciado de la práctica.
@@ -45,7 +43,3 @@ Para esto se implementaron los metodos del Data Source:
 
 * tableView:cellForRowAtIndexPath
 * tableView:titleForHeaderInSection
-
-
-
-

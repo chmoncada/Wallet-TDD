@@ -80,11 +80,22 @@
 }
 
 -(void) takeMoney:(AGTMoney *) money {
+    
     //Creo una moneda negativa (una chapuza)
     AGTMoney *moneyWithdraw = [[AGTMoney alloc] initWithAmount:(0-[money.amount integerValue]) currency:money.currency];
     
-    //Adiciono esa moneda negativa
-    [self addMoney:moneyWithdraw];
+    // Compruebo si hay monedas suficientes sino lanzo una excepcion (la comprobacion sirve tambien si el currency no existe ya que
+    // uno de los componentes de la comparacion se hace nil y un integer es mayor a nil
+    // Se podria mejorar la comparacion para que bote una excepcion especifica
+    if ([money.amount integerValue] > [[[self getTotalOfCurrency:money.currency] amount] integerValue] ) {
+        NSException *e = [NSException exceptionWithName:@"CannotTakeMoreMoneyThatExistOrTakeMoneyFromANonExistingCurrency"
+                                                 reason:@"*** Cannot take more money from the wallet or the currency does not exist in the wallet" userInfo:nil];
+        @throw e;
+    } else {
+        //Adiciono esa moneda negativa
+        [self addMoney:moneyWithdraw];
+    }
+    
 }
 
 

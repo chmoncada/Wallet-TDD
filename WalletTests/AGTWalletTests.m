@@ -63,16 +63,21 @@
     
     // Creo un wallet con monedas
     AGTWallet *wallet = [[AGTWallet alloc] initWithAmount:50 currency:@"EUR"];
+    [wallet plus:[AGTMoney dollarWithAmount:50]];
     
     // Tomo monedas
     [wallet takeMoney: [AGTMoney euroWithAmount:20]];
+    
     
     // Veo cuanto sobra de esa moneda en mi wallet
     AGTMoney *totalEuros = [wallet getTotalOfCurrency:@"EUR"];
     
     // Testeo
     XCTAssertEqualObjects(totalEuros, [AGTMoney euroWithAmount:30], @"The wallet should be diminished by the money taken, €50 - €20 = €30");
-    
+    // Test para comprobar que si se intenta sacar mas monedas de las que existen tira una excepcion
+    XCTAssertThrows([wallet takeMoney:[AGTMoney dollarWithAmount:60]], @"It is forbidden to take out more money that exists");
+    // Test para comprobar que si intento sacar una moneda con un currency que no existe tira una excepcion
+    XCTAssertThrows([wallet takeMoney:[[AGTMoney alloc] initWithAmount:10 currency:@"AUD"]], @"The currency should exist in the wallet" );
 }
 
 
