@@ -16,26 +16,26 @@
 
 @implementation AGTMoney
 
-+(id) euroWithAmount: (NSInteger) amount {
++(id) euroWithAmount: (float) amount {
     return [[AGTMoney alloc] initWithAmount:amount currency:@"EUR"];
 }
 
-+(id) dollarWithAmount: (NSInteger) amount {
++(id) dollarWithAmount: (float) amount {
     return [[AGTMoney alloc] initWithAmount:amount currency:@"USD"];
 }
 
--(id) initWithAmount: (NSInteger) amount currency:(NSString *)currency {
+-(id) initWithAmount: (float) amount currency:(NSString *)currency {
     if (self = [super init]) {
-        _amount = @(amount);
+        _amount = [NSNumber numberWithFloat: amount];
         _currency = currency;
     }
     return self;
 }
 
--(id<AGTMoney>) times:(NSInteger) multiplier{
+-(id<AGTMoney>) times:(float) multiplier{
     
     AGTMoney *newMoney = [[AGTMoney alloc]
-                        initWithAmount:[self.amount integerValue]*multiplier currency:self.currency];
+                        initWithAmount:[self.amount floatValue]*multiplier currency:self.currency];
     
     return newMoney;
 }
@@ -45,7 +45,7 @@
     // It should add only if the currency of both AGTMoney are the same
     if( [self.currency isEqual:[other currency]]) {
 
-        NSInteger totalAmount = [self.amount integerValue] + [other.amount integerValue];
+        float totalAmount = [self.amount floatValue] + [other.amount floatValue];
         AGTMoney *total = [[AGTMoney alloc] initWithAmount:totalAmount currency:self.currency];
         
         return total;
@@ -71,7 +71,7 @@
         // No hay tasa de conversion, excepcion que te crio
         [NSException raise:@"NoConversionRateException" format:@"Must have a conversion from %@ to %@", self.currency, currency];
     } else {
-        NSInteger newAmount = [self.amount integerValue] * rate;
+        float newAmount = [self.amount floatValue] * rate;
         
         result = [[AGTMoney alloc]
                   initWithAmount:newAmount
@@ -100,7 +100,7 @@
 }
 
 -(NSUInteger) hash {
-    return [self.amount integerValue];
+    return [self.amount floatValue];
 }
 
 

@@ -95,7 +95,7 @@
     
 }
 
--(void) testDecription {
+-(void) testDescription {
     
     AGTMoney *one = [AGTMoney dollarWithAmount:1];
     NSString *desc = @"<AGTMoney: USD 1>";

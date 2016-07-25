@@ -26,7 +26,7 @@
     
 }
 
--(void) addRate:(NSInteger) rate
+-(void) addRate:(float) rate
    fromCurrency:(NSString*)fromCurrency
      toCurrency:(NSString*)toCurrency {
     

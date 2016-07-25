@@ -12,9 +12,9 @@
 
 @protocol AGTMoney <NSObject>
 
--(id) initWithAmount: (NSInteger) amount currency: (NSString *) currency;
+-(id) initWithAmount: (float) amount currency: (NSString *) currency;
 
--(id<AGTMoney>) times:(NSInteger) multiplier;
+-(id<AGTMoney>) times:(float) multiplier;
 
 -(id<AGTMoney>) plus:(AGTMoney *) other;
 
@@ -27,8 +27,8 @@
 @property (nonatomic, strong, readonly) NSNumber *amount;
 @property (nonatomic, readonly) NSString *currency;
 
-+(id) euroWithAmount: (NSInteger) amount;
-+(id) dollarWithAmount: (NSInteger) amount;
++(id) euroWithAmount: (float) amount;
++(id) dollarWithAmount: (float) amount;
 
 
 

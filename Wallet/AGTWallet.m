@@ -17,7 +17,7 @@
 
 
 
--(id) initWithAmount:(NSInteger)amount currency:(NSString *)currency {
+-(id) initWithAmount:(float) amount currency:(NSString *)currency {
     if (self = [super init]) {
         AGTMoney *money = [[AGTMoney alloc]initWithAmount:amount currency:currency];
         _moneys = [NSMutableArray array];
@@ -49,7 +49,7 @@
     return self;
 }
 
--(id<AGTMoney>) times:(NSInteger)multiplier {
+-(id<AGTMoney>) times:(float)multiplier {
     
     NSMutableArray *newMoneys = [NSMutableArray arrayWithCapacity:self.moneys.count];
     for (AGTMoney *each in self.moneys) {

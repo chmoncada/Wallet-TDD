@@ -16,7 +16,7 @@
 -(AGTMoney *) reduce:(id<AGTMoney>) money
           toCurrency:(NSString *) currency;
 
--(void) addRate:(NSInteger) rate
+-(void) addRate:(float) rate
    fromCurrency:(NSString*)fromCurrency
      toCurrency:(NSString*)toCurrency;
 

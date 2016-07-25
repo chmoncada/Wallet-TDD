@@ -21,13 +21,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    AGTWallet *wallet = [[AGTWallet alloc] initWithAmount:20 currency:@"EUR"];
-    [wallet addMoney:[AGTMoney dollarWithAmount:10]];
-    [wallet addMoney:[AGTMoney dollarWithAmount:10]];
+    AGTWallet *wallet = [[AGTWallet alloc] initWithAmount:20.0 currency:@"EUR"];
+    [wallet addMoney:[AGTMoney dollarWithAmount:5]];
+    [wallet addMoney:[AGTMoney dollarWithAmount:5]];
     [wallet addMoney:[AGTMoney euroWithAmount:20]];
     
     AGTBroker *broker = [AGTBroker new];
-    [broker addRate:2
+    [broker addRate:1.3
        fromCurrency:@"EUR"
          toCurrency:@"USD"];
     
