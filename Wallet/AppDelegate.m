@@ -21,6 +21,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    // Test model for tableview
     AGTWallet *wallet = [[AGTWallet alloc] initWithAmount:20.0 currency:@"EUR"];
     [wallet addMoney:[AGTMoney dollarWithAmount:5]];
     [wallet addMoney:[AGTMoney dollarWithAmount:5]];
@@ -31,16 +32,7 @@
        fromCurrency:@"EUR"
          toCurrency:@"USD"];
     
-    //prueba
-//    [wallet addMoney:[[AGTMoney alloc] initWithAmount:10 currency:@"AUD"]];
-//    [broker addRate:4
-//       fromCurrency:@"EUR"
-//         toCurrency:@"AUD"];
-//    [wallet takeMoney:[[AGTMoney alloc] initWithAmount:5 currency:@"AUD"]];
-//    [wallet takeMoney:[AGTMoney euroWithAmount:40]];
-    //Fin de pruebas
-    
-    
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     AGTWalletTableViewController *vc = [[AGTWalletTableViewController alloc] initWithModel:wallet

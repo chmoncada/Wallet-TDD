@@ -73,19 +73,24 @@ static NSString *cellID = @"cellIdentifier";
     
     AGTMoney *moneyForCell;
     NSString *textOfCell;
+    NSNumberFormatter *nf = [[NSNumberFormatter alloc] init];
+    nf.maximumFractionDigits = 2;
+    nf.minimumFractionDigits = 2;
+    nf.minimumIntegerDigits = 1;
+    
     //Si la sección es la ultima, mostramos el total de todo el wallet
     if (indexPath.section == [self.model numberOfCurrencies]) {
         moneyForCell = [self.model reduceToCurrency:@"EUR" withBroker:self.broker];
-        textOfCell = [NSString stringWithFormat:@"Gran Total: %@ EUR", [moneyForCell amount]];
+        textOfCell = [NSString stringWithFormat:@"Gran Total: %@ EUR",[nf stringFromNumber:[moneyForCell amount]] ];
     } else {
         //Si la celda es la ultima de la seccion, mostramos el subtotal del currency
         if (indexPath.row == [self.model numberOfMoneysForSection:indexPath.section]) {
             moneyForCell = [self.model getTotalOfCurrency:[[self.model currencies] objectAtIndex: indexPath.section ]];
-            textOfCell = [NSString stringWithFormat:@"SubTotal: %@ %@", [moneyForCell amount], [moneyForCell currency]];
+            textOfCell = [NSString stringWithFormat:@"SubTotal: %@ %@", [nf stringFromNumber:[moneyForCell amount]], [moneyForCell currency]];
         } else {
             //Mostramos el valor de cada money
             moneyForCell = [[self.model moneysForSection:indexPath.section] objectAtIndex:indexPath.row];
-            textOfCell = [NSString stringWithFormat:@"%@ %@", [moneyForCell amount], [moneyForCell currency]];
+            textOfCell = [NSString stringWithFormat:@"%@ %@", [nf stringFromNumber:[moneyForCell amount]], [moneyForCell currency]];
         }
         
     }

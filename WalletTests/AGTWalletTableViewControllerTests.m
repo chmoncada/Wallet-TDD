@@ -41,14 +41,21 @@
 }
 
 -(void) testThatTableHasOneSectionPerCurrencyPlusOneForTotal {
+
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wnonnull"
     
     NSUInteger sections = [self.walletVC numberOfSectionsInTableView:nil]; //nos hacemos pasar como otra cosa
     
     XCTAssertEqual(sections, 3, @"There must exist 3 sections ( USD, EUR and Total)");
+
+#pragma clang diagnostic pop
     
 }
 
 -(void) testThatNumberOfCellsIsNumberOfMoneysPlusOne {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wnonnull"
     
     //The seccion 0 (USD) must contain 3 cells
     XCTAssertEqual(3, [self.walletVC tableView:nil numberOfRowsInSection:0], @"Number of cells is the number of money plus 1 (USD case = 3)");
@@ -56,6 +63,9 @@
     XCTAssertEqual(2, [self.walletVC tableView:nil numberOfRowsInSection:1], @"Number of cells is the number of money plus 1 (EUR case = 2)");
     //The total section must contain 1 cell
     XCTAssertEqual(1, [self.walletVC tableView:nil numberOfRowsInSection:2], @"Total must contain 1 cell");
+
+#pragma clang diagnostic pop
+    
     
 }
 
