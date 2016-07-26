@@ -25,6 +25,8 @@ Se modificaron los siguientes Test comparados con los del curso Online:
 
 * testSimpleAddition (AGTMonetTests) - Se añadio el escenario de evitar la suma simple de dos monedas de diferente currency
 
+Se modifico el modelo AGTMoney y AGTWallet para que pueda aceptar monedas de tipo float.
+
 
 ## Controladores
 
@@ -37,7 +39,7 @@ Se crearon los tests del data source de la tabla:
 
 ## App
 
-Se creo una tabla de ejemplo para mostrar la funcionalidad de secciones por divisa y celdas de subtotales y Gran Total.
+Se creo una tabla de ejemplo para mostrar la funcionalidad de secciones por divisa y celdas de subtotales y Gran Total.  Se seteo la vista para mostrar dos decimales.
 
 Para esto se implementaron los metodos del Data Source:
 
